@@ -1,0 +1,22 @@
+USE airline_management_system;
+
+CREATE TABLE Flight(
+  Flight_ID VARCHAR(15),
+  Departure VARCHAR(30),
+  Arrival VARCHAR(30),
+  Flight_date DATE,
+  A_ID INT,
+  PRIMARY KEY(Flight_ID),
+  FOREIGN KEY (A_ID) REFERENCES Airplane_type(A_ID)
+);
+
+INSERT INTO Flight VALUES('AI2014', '2021-01-12 08:45am','2021-01-12 10:25pm','2021-01-12',738),
+('QR2305', '2020-12-26 12:05pm', '2020-12-27 12:25pm', '2020-12-26',777),
+('EY1234', '2021-02-10 05:00am', '2021-02-10 10:30pm', '2021-02-10',750),
+('LH9876', '2021-02-25 10:15am', '2021-02-25 11:00pm', '2021-02-25',790),
+('BA1689', '2021-03-02 2:15am', '2021-03-02 10:00pm','2021-03-02',745),
+('AA4367', '2021-03-25 12:05am','2021-03-25 02:15am', '2021-03-25',768),
+('CT7812', '2021-04-04 2:15pm', '2021-04-04 8:00pm', '2021-04-04',821),
+('PF4521', '2020-12-25 5:00pm', '2020-12-25 10:30pm', '2020-12-25',785);
+
+SELECT * FROM Flight;
